@@ -1,0 +1,295 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+//fondo
+.bg-pattern {
+    background-image: url("https://images.unsplash.com/photo-1608665476361-be7f10606ade?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2thbmQlMjB3aXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=3000&q=60");
+}
+
+//footer
+footer {
+    @extend .textCenter;
+    background-color: $color-white;
+    margin-top: auto;
+    padding-top: 5rem;
+
+    .iconWeb {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .footNom {
+        padding-top: 1rem;
+        font-size: small;
+    }
+
+    .imgIcon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.botonDeVerMas {
+    @extend button;
+    margin: 10px;
+}
+
+//Pagina Envio
+.divEnvio {
+    @include divQE;
+
+    .imgEnvio {
+        @include img;
+        margin: 20px;
+    }
+
+    .textoEv {
+        line-height: 1em;
+
+        .h1Envios {
+            font-size: $fuente-2-3;
+            color: $color-dark;
+            padding: 0.8rem;
+        }
+
+        .h2Envios {
+            color: $color-dark;
+            margin-top: 5px;
+            font-size: $fuente-1-3;
+            padding: 0.6rem;
+        }
+
+        .textEnvios {
+            width: 90%;
+            margin: 0.1px;
+            padding: 0.5rem;
+        }
+    }
+
+    .btnElegirEnvio {
+        width: 90%;
+        padding: 1rem;
+
+        .btnEnvio {
+            width: 70%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+//Pagina QuienesSomos
+.divQuienes {
+    @include divQE;
+
+    .tabla {
+        margin: 10%;
+    }
+
+    .imgQuienes {
+        @include img;
+        margin-inline-start: -50px;
+    }
+
+    .textQuienes {
+        @include texto;
+    }
+}
+
+button {
+    background: darken($color-rose, 10%);
+    padding: 10px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-white;
+    cursor: pointer;
+    width: 45%;
+
+    &:hover {
+        background: $color-dark;
+        transition: all .4s ease-in-out;
+    }
+
+    .masNosotros {
+        width: 67%;
+    }
+
+    .like {
+        width: 22%;
+    }
+}
+
+//Pagina Contacto
+#formMain {
+    width: 100%;
+    float: left;
+    padding-top: -24px;
+}
+
+#formDiv {
+    background-color: $color-grey;
+    padding: 55px 45px 40px 20px;
+    width: 800px;
+    float: left;
+    left: 45%;
+    position: relative;
+    margin-top: 0px;
+    margin-left: -260px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+    #name {
+        @include formulario;
+        background-image: url("https://cdn4.iconfinder.com/data/icons/e-commerce-icon-set/48/Username_2-512.png");
+
+        &:focus {
+            @include sombras;
+            @include formulario;
+            background-image: url("https://cdn4.iconfinder.com/data/icons/e-commerce-icon-set/48/Username_2-512.png");
+            background-position: 8px 5px;
+        }
+    }
+
+    #email {
+        @include formulario;
+        background-image: url("https://cdn0.iconfinder.com/data/icons/picons-social/57/67-gmail-512.png");
+
+        &:focus {
+            @include sombras;
+            @include formulario;
+            background-image: url("https://cdn0.iconfinder.com/data/icons/picons-social/57/67-gmail-512.png");
+        }
+    }
+
+    #comment {
+        @include formulario;
+        background-image: url("https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_comment_48px-512.png");
+
+        &:focus {
+            @include sombras;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        line-height: 150%;
+        resize: vertical;
+    }
+
+    .buttonContact {
+        @extend button;
+        box-shadow: 10px 5px 8px;
+    }
+}
+
+.feedbackInput {
+    @include texto;
+    font-weight: 500;
+    background-color: $color-white;
+    padding: 13px 13px 13px 54px;
+    width: 100%;
+    border: 3px solid $color-black;
+
+    &:focus {
+        background: $color-white;
+        box-shadow: 0;
+        border: 3px solid $color-blue;
+        color: $color-blue;
+        outline: none;
+        padding: 13px 13px 13px 54px;
+    }
+}
+
+//404
+.contenError {
+    font-family: $font-lato;
+    font-weight: 600;
+    color: $color-dark;
+
+    .sectionError {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: $color-light;
+
+        &_subtitle {
+            color: $color-celeste;
+            text-transform: uppercase;
+            letter-spacing: 5pt;
+            font-weight: 500;
+            font-size: 0.8rem;
+            margin-bottom: -5em;
+        }
+
+        p {
+            top: 2rem;
+            left: 2rem;
+            background-color: $color-dark;
+            background-position: var(--x) var(--y);
+            background-repeat: no-repeat;
+            text-shadow: none;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.1s ease;
+        }
+
+        .tituleError {
+            --x-shadow: 0;
+            --y-shadow: 0;
+            --x: 50%;
+            --y: 50%;
+            font-size: 15rem;
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 2rem;
+
+            &:hover {
+                transition: all 0.2s ease;
+                text-shadow: var(--x-shadow) var(--y-shadow) 100px $color-bluegr;
+            }
+        }
+    }
+
+    .btn {
+        padding: 0.8em 1.5em;
+        border-radius: 99999px;
+        background-color: $color-bluegr;
+        box-shadow: 0px 2px 5px 0px $color-texto, inset 0px -2px 5px 0px $color-texto;
+        border: none;
+        cursor: pointer;
+        text-shadow: 0px 1px $color-blue;
+        color: $color-white;
+        text-transform: uppercase;
+        letter-spacing: 1.5pt;
+        font-family: $font-helvatica;
+        font-size: 0.8rem;
+        font-weight: 700;
+        transition: ease-out 0.2s all;
+
+        &:hover {
+            @include sombras;
+        }
+    }
+}

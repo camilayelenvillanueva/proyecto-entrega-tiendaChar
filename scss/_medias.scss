@@ -1,0 +1,83 @@
+/*media productos*/
+@media(min-width:520px) {
+    .productos .contenedor {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+}
+
+@media(min-width:728px) {
+    .productos .contenedor {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+}
+
+@media(min-width:1024px) {
+    .productos .contenedor {
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    .contenedor {
+        width: 1024px;
+    }
+}
+
+@media (min-width:1200px) {
+    .contenedor {
+        width: 1200px;
+    }
+}
+
+//media de quienes somos
+@media (max-width: 728px) {
+    .imgQuienes {
+        display: none;
+        visibility: hidden;
+    }
+
+    .textQuienes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .like {
+        width: 20%;
+        padding-right: 20px;
+        padding-bottom: 34px;
+    }
+}
+
+//media de envios
+@media (max-width: 728px) {
+
+    .textoEv {
+        text-align: center;
+        display: inline-block;
+        text-align: left;
+        margin-left: -90px;
+    }
+
+    .textEnvios {
+        padding: -10rem;
+        line-height: 2em;
+    }
+
+    .imgEnvio {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+//media de formulario
+@media (max-width: 728px) {
+    #formDiv {
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+
+    }
+}

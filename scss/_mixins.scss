@@ -1,0 +1,45 @@
+@mixin texto() {
+    color: $color-dark;
+    font-size: $fuente-0-9;
+    line-height: 2em;
+    text-align: justify;
+    margin-bottom: 17px;
+    font-family: $font-helvatica;
+    width: 90%;
+
+}
+
+@mixin img() {
+    display: flex;
+    width: 80%;
+}
+
+@mixin divQE() {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1608665476361-be7f10606ade?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2thbmQlMjB3aXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=3000&q=60");
+    font-family: $font-lato, sans-serif;
+    text-transform: uppercase;
+
+}
+
+@mixin formulario() {
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: 11px 8px;
+}
+
+@mixin ajustarPro() {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@mixin sombras() {
+    color: $color-rose;
+    text-shadow: 0px 1px 1px $color-texto;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px 2px $color-dark;
+    transition: ease-out 0.2s all;
+}
