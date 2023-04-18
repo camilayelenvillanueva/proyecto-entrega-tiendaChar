@@ -26,4 +26,9 @@
     color: $color-white;
     width: 20%;
     border-radius: 10px;
+
+    &:hover {
+        @include iconoWssp;
+        color: $color-rose;
+    }
 }

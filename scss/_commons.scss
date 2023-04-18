@@ -28,13 +28,15 @@ header {
     text-align: center;
     z-index: 100;
 
+    &:hover {
+        @include iconoWssp;
+    }
+
     .iconWhatssap {
         margin-top: 13px;
 
     }
 }
-
-
 
 //fondo
 .bg-pattern {
@@ -64,6 +66,9 @@ footer {
         flex-direction: row;
         width: 40px;
         height: 40px;
+        &:hover{
+            @include iconoWssp;
+        }
     }
 }
 
