@@ -21,6 +21,20 @@ header {
   font-size: 1.3em;
 }
 
+.iconWssp {
+  text-decoration: none;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  text-align: center;
+  z-index: 100;
+}
+.iconWssp .iconWhatssap {
+  margin-top: 13px;
+}
+
 .bg-pattern {
   background-image: url("https://images.unsplash.com/photo-1608665476361-be7f10606ade?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2thbmQlMjB3aXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=3000&q=60");
 }
@@ -31,14 +45,18 @@ footer {
   padding-top: 5rem;
 }
 footer .iconWeb {
+  text-decoration: none;
   padding-left: 4rem;
   padding-right: 4rem;
 }
 footer .footNom {
+  display: flex;
+  justify-content: center;
   padding-top: 1rem;
   font-size: small;
 }
 footer .imgIcon {
+  flex-direction: row;
   width: 40px;
   height: 40px;
 }
