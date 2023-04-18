@@ -1,20 +1,22 @@
 .TituloProductos {
+    display: flex;
+    justify-content: center;
     background-color: transparent;
+    font-family: $font-lato;
     font-size: $fuente-2;
     margin-top: 4rem;
     color: $color-texto;
     margin: 30px;
 }
-
 .productos {
     display: grid;
-
     .contenedor {
         display: grid;
         width: 65%;
         margin: auto;
 
         .productoColumna {
+            text-align: center;
             margin: 5px;
             background-color: $color-grey;
             max-width: max-content;
