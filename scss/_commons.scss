@@ -12,6 +12,15 @@ body {
     min-height: 100%;
 }
 
+.animate__animated .animate__jackInTheBox {
+    --animate-duration: 4s;
+
+    &:root {
+        --animate-duration: 800;
+        --animate-delay: 2s;
+    }
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -76,6 +85,10 @@ footer {
 .botonDeVerMas {
     @extend button;
     margin: 10px;
+
+    &:hover {
+        @include sombras;
+    }
 }
 
 //Pagina Envio
@@ -118,6 +131,10 @@ footer {
             width: 70%;
             padding: 5px;
             margin-bottom: 10px;
+
+            &:hover {
+                @include sombras;
+            }
         }
     }
 }
@@ -133,6 +150,7 @@ footer {
     .imgQuienes {
         @include img;
         margin-inline-start: -50px;
+
     }
 
     .textQuienes {
@@ -156,6 +174,8 @@ button {
     &:hover {
         background: $color-dark;
         transition: all .4s ease-in-out;
+        @include sombras;
+
     }
 
     .masNosotros {
@@ -168,6 +188,7 @@ button {
 }
 
 //Pagina Contacto
+
 #formMain {
     width: 100%;
     float: left;
@@ -235,8 +256,13 @@ button {
         justify-content: center;
         @extend button;
         box-shadow: 10px 5px 8px;
+
+        &:hover {
+            @include sombras;
+        }
     }
 }
+
 
 .feedbackInput {
     @include texto;
@@ -249,7 +275,7 @@ button {
     &:focus {
         background: $color-white;
         box-shadow: 0;
-        border: 3px solid $color-blue;
+        border: 3px solid $color-light;
         color: $color-blue;
         outline: none;
         padding: 13px 13px 13px 54px;

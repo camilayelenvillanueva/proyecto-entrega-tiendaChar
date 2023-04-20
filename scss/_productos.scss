@@ -41,7 +41,11 @@
                 @extend button;
                 margin: 3px;
                 box-shadow: 10px 5px 8px;
-                width: 60%;
+                width: 70%;
+
+                &:hover {
+                    @include sombras;
+                }
             }
         }
     }
